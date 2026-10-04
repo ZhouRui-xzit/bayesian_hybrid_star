@@ -1,0 +1,15 @@
+{
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 18,
+    "editor.lineHeight": 24,
+    "editor.letterSpacing": 0,
+    "editor.padding.top": 12,
+    "editor.padding.bottom": 12,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "selection",
+    "editor.guides.bracketPairs": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.lineHeight": 1.2
+}

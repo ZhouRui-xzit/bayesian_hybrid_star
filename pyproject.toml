@@ -1,0 +1,43 @@
+[project]
+name = "njl-rmf-stars"
+version = "0.1.0"
+description = "JAX-based NJL/RMF hybrid stars, GR Bayesian inference, and EGB posterior propagation"
+requires-python = ">=3.14,<3.15"
+
+# Resolve a compatible set with uv sync, then commit uv.lock.
+# CPU JAX is the portable baseline; configure GPU support per target platform.
+dependencies = [
+    "jax",
+    "optimistix",
+    "numpyro",
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "arviz",
+    "pyyaml",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab", "ipykernel"]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[tool.uv]
+# Run from the repository root: uv run python -m scripts.step01_njl ...
+# src contains flat modules and __init__.py; no build backend is required.
+package = false
+default-groups = ["dev"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Reproducible example outputs and local tool caches
+data/runs/
+.pytest_cache/
+.ruff_cache/
+data/example__NJL0T/
+
+.DS_Store
